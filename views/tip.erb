@@ -1,0 +1,67 @@
+<script language='javascript'>
+    function hideadd()
+    {
+        var info = document.getElementById('add');
+        if(info.style.display == "")
+           info.style.display = "none";
+        else
+           info.style.display = "";
+    }
+ </script>
+ 
+<legend onclick="hideadd()" contenteditable="false">添加Tips</legend>
+
+<form id='add' style="display:none" action='/data/tips/add' class='form-horizontal'>
+   <div class="control-group"><label class="control-label" contenteditable="true" for="inputEmail">作者</label>
+       <div class="controls"><input name="author" placeholder="" type="text" /></div>
+   </div>
+   <div class="control-group"><label class="control-label" contenteditable="true" for="inputEmail">标签</label>
+       <div class="controls"><input name="tags" placeholder="" type="text" /></div>
+   </div>
+   <div class="control-group"><label class="control-label" contenteditable="true" for="inputEmail">内容</label>
+       <div class="controls"><textarea name="content" placeholder="" type="text" ></textarea></div>
+   </div>
+   
+   <div class="control-group">
+      <div class="controls"><button class="btn" contenteditable="true" type="submit">提交</button></div>
+   </div>
+<!--
+   <fieldset>
+
+       <label contenteditable="true">作者</label>
+       <input name="author" type="text" placeholder="Type something…">
+   
+       <label contenteditable="true">标签</label>
+       <input name="tags" type="text" placeholder="以空格分开"> 
+              
+       <label contenteditable="true">内容</label>
+       <textarea name="content" type="text" placeholder="Type something…"></textarea>
+       
+       
+       <button type="submit" class="btn" contenteditable="true">提交</button>
+   </fieldset>
+-->
+</form>
+
+<% tips = locals[:tips]
+   bg = ["FFFFFF","CCCCCC"]
+   flag = true
+   tips.each do |tip| 
+     style = bg[0]
+     style = bg[1] if flag
+     flag = (not flag)
+        
+     data="<div  class=\"row-fluid\">
+	        <div class=\"span12\">		
+		   <blockquote  style=\"background:##{style}\">
+		      <p><strong>作者：</strong> #{tip.author}&nbsp; 
+                         <strong>标签：</strong> #{tip.tags}&nbsp;
+                         <strong>创建时间：</strong> #{tip.created_at}&nbsp;
+                      </p>
+                      <h3><em >#{tip.content}</em></h3>
+                   </blockquote>
+	        </div>
+            </div>"
+%>
+<%= data%>
+<% end %>

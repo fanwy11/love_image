@@ -1,0 +1,254 @@
+<script language='javascript'>
+   function hideadd()
+   {
+      var info = document.getElementById('add');
+      if(info.style.display == "")
+         info.style.display = "none";
+      else
+         info.style.display = "";
+   }
+   
+   function show_info(id)
+   {
+       var all = document.getElementsByName('recinfo');
+       for(var i=0;i<all.length;i++){
+          all[i].style.display = 'none';
+       }
+       var info = document.getElementById("rec_info_"+id);
+       info.style.display = "";
+   }
+</script>
+
+<legend onclick="hideadd()" contenteditable="false">添加招聘信息</legend>
+
+<div id='add' style="display:none">
+<form action='/data/recruitments/add' class="form-horizontal">
+   <div class="control-group"><label class="control-label" contenteditable="true" for="inputEmail">标题</label>
+       <div class="controls"><input name="title" placeholder="" type="text" /></div>
+   </div>
+
+   <div class="control-group"><label class="control-label" contenteditable="true" for="inputPassword">公司</label>
+       <div class="controls"><input name="company" placeholder="" type="text" /></div>
+   </div>
+
+   <div class="control-group">
+       <label class="control-label" contenteditable="true">开始时间</label>
+       <tr>
+         <td class="input">
+         <div class="controls">
+            <select name="startyear" class="J_checkBase">
+               <option value=""></option>
+               <option value="2013">2013</option>
+               <option value="2014">2014</option>
+            </select>
+            <span class="input">年</span>
+
+           <select name="startmonth" class="J_checkBase">
+               <option value=""></option>
+              <option value="01">1</option>
+               <option value="02">2</option>
+               <option value="03">3</option>
+               <option value="04">4</option>
+               <option value="05">5</option>
+               <option value="06">6</option>
+               <option value="07">7</option>
+               <option value="08">8</option>
+               <option value="09">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+          </select> 
+          <span class="input">月</span>
+   
+          <select name="startdate" class="J_checkBase">
+               <option value=""></option>
+               <option value="01">1</option>
+               <option value="02">2</option>
+               <option value="03">3</option>
+               <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+          </select> 
+          <span class="input">日</span>
+        </div>
+        </td>
+       </tr>
+   </div>
+
+   <div class="control-group">
+       <label class="control-label" contenteditable="true">截止日期</label>
+       <tr>
+         <td class="input">
+         <div class="controls">
+            <select name="endyear" class="J_checkBase">
+               <option value=""></option>
+               <option value="2013">2013</option>
+               <option value="2014">2014</option>
+            </select>
+            <span class="input">年</span>
+
+           <select name="endmonth" class="J_checkBase">
+               <option value=""></option>
+              <option value="01">1</option>
+               <option value="02">2</option>
+               <option value="03">3</option>
+               <option value="04">4</option>
+               <option value="05">5</option>
+               <option value="06">6</option>
+               <option value="07">7</option>
+               <option value="08">8</option>
+               <option value="09">9</option>
+               <option value="10">10</option>
+               <option value="11">11</option>
+               <option value="12">12</option>
+          </select> 
+          <span class="input">月</span>
+   
+          <select name="enddate" class="J_checkBase">
+               <option value=""></option>
+               <option value="01">1</option>
+               <option value="02">2</option>
+               <option value="03">3</option>
+               <option value="04">4</option>
+            <option value="05">5</option>
+            <option value="06">6</option>
+            <option value="07">7</option>
+            <option value="08">8</option>
+            <option value="09">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+          </select> 
+          <span class="input">日</span>
+        </div>
+        </td>
+       </tr>
+   </div>
+
+   <div class="control-group"><label class="control-label" contenteditable="true" for="inputEmail">网申地址</label>
+      <div class="controls"><input name="apply_url" placeholder="" type="text" /></div>
+   </div>
+
+   <div class="control-group"><label class="control-label" contenteditable="true" for="inputPassword">备注</label>
+       <div class="controls"><textarea name="content" placeholder="" type="text"></textarea></div>
+   </div>
+
+   <div class="control-group">
+      <div class="controls"><button class="btn" contenteditable="true" type="submit">提交</button></div>
+   </div>
+</form>  
+</div>
+
+<% recruitments = locals[:recruitments]
+   if recruitments != nil
+      infos = ""
+      recruitments.each do |re|
+         id = "rec_info_" + re.id.to_s
+         data="<div name='recinfo' id=#{id} style=\"display:none\" class=\"row-fluid\">
+	          <div class=\"span12\">		
+		     <blockquote style=\"background:#CCCCCC\">
+		        <p>
+                            <strong>标题：</strong> #{re.title}&nbsp; 
+                            <strong>创建时间：</strong> #{re.created_at}&nbsp;
+                        </p> 
+                        <p> <strong>公司：</strong> #{re.company}&nbsp; </p>
+                        <p> <strong>开始日期：</strong>#{re.start_time}&nbsp; </p>
+                        <p> <strong>截止日期：</strong>#{re.end_time}&nbsp;   </p>
+                        <p> <strong>网申地址：</strong><a href=#{re.apply_url} > #{re.apply_url}</a>&nbsp; </p>
+                        <h4><em>#{re.content}</em></h4>
+                    </blockquote>
+	         </div>
+             </div>"
+         infos = infos + data
+   end 
+end
+%>
+
+<div >
+   <table >
+<%  data = locals[:data]
+    if data != nil
+       data.each do |msg|
+         date="<tr>
+            <td> <a href=\"#\" class=\"button button-pill button-flat-primary\">#{msg[:time]}</a></td>
+            </tr>"
+%>
+          <%=date%>
+<%
+          msg[:data].each do |res|
+             id = "rec_info_" + res.id.to_s
+             detail="<div name='recinfo' id=#{id} style=\"display:none\" class=\"row-fluid\">
+	             <div class=\"span12\">		
+		        <blockquote style=\"background:#CCCCCC\">
+		           <p>
+                              <strong>标题：</strong> #{res.title}&nbsp; 
+                              <strong>创建时间：</strong> #{res.created_at}&nbsp;
+                           </p> 
+                           <p> <strong>公司：</strong> #{res.company}&nbsp; </p>
+                           <p> <strong>开始日期：</strong>#{res.start_time}&nbsp; </p>
+                           <p> <strong>截止日期：</strong>#{res.end_time}&nbsp;   </p>
+                           <p> <strong>网申地址：</strong><a href=#{res.apply_url} > #{res.apply_url}</a>&nbsp; </p>
+                           <h4><em>#{res.content}</em></h4>
+                        </blockquote>
+	             </div>
+                     </div>"
+
+
+             info="<tr>
+                    <td></td>
+                    <td><span class=\"button-wrap\"><a href=\"#\" class=\"button button-pill \">#{res.start_time.mon}-#{res.start_time.day}</a></span></td>
+                    <td><a href=\"#\" onclick=\"show_info(#{res.id})\" class=\"button\">#{res.title}</a></td>
+                    <td id='info'rowspan='8'>#{detail}</td>
+                 </tr>"
+%>
+             <%=info%>
+<%
+          end
+       end
+    end
+%>
+  </table>
+ 
+</div>

@@ -1,0 +1,28 @@
+<%
+   title = locals[:title]
+   message = locals[:message]
+   url = locals[:url]
+%>
+
+<link href="/css/image/image.css" type="text/css" rel="stylesheet" />
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="carousel slide" id="carousel-917223">
+				<div class="carousel-inner">
+					<div class="item active" >
+						<center>
+							<img style=centre alt="" src=<%=url%> />
+						</center>	
+						<div class="carousel-caption">
+							<h4><%=title%></h4>
+							<p> <%=message%></p>
+						</div>
+					</div>
+				</div>
+				<a data-slide="prev" href="#carousel-917223" class="left carousel-control">‹</a>
+				<a data-slide="next" href="#carousel-917223" class="right carousel-control">›</a>
+			</div>
+		</div>
+	</div>
+</div>

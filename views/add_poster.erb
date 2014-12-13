@@ -1,0 +1,31 @@
+<form class="form-horizontal" action="poster" method="POST">
+	<div class="control-group">
+		<label class="control-label" contenteditable="true" >图片名</label>
+		<div class="controls">
+			<input name="name" type="text" />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label" contenteditable="true" >内容</label>
+		<div class="controls">
+			<input name="content" type="text" />
+		</div>
+	</div>
+
+	<div class="control-group">
+		<label class="control-label" contenteditable="true" >图片地址</label>
+		<div class="controls">
+			<input name="pic_url" type="text" />
+		</div>
+	</div>
+
+	<%=yield%>	
+
+	<div class="control-group">
+		<div class="controls">
+			<button class="btn" contenteditable="true" type="submit">添加</button>
+		</div>
+	</div>
+</form>
+
